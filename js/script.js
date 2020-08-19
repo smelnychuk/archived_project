@@ -25,14 +25,34 @@
 
 // alert(`Привет, ${user}`);
 
-console.log('arr' + " - object");
-console.log(4 + " - object");
+// console.log('arr' + " - object");
+// console.log(4 + " - object");
 
-let incr = 10,
-    decr = 10;
+// let incr = 10,
+//    decr = 10;
 
-incr++;
-decr--;
+// incr++;
+// decr--;
 
-console.log(incr);
-console.log(decr);
+// console.log(incr);
+// console.log(decr);
+
+const numberOfFilms = +prompt('How many movies have you seen?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+const a = prompt('What was the last movie you saw?', ''),
+      b = prompt('How mach do you rate it?', ''),
+      c = prompt('What was the last movie you saw?', ''),
+      d = prompt('How mach do you rate it?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
