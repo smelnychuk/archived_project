@@ -17,7 +17,7 @@
 // Код возьмите из предыдущего домашнего задания
 
 for (let i = 0; i < 1; i++) {
-    const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
     if (numberOfFilms >= 0 && numberOfFilms < 10) {
         alert('Просмотрено довольно мало фильмов');
@@ -25,8 +25,6 @@ for (let i = 0; i < 1; i++) {
         alert('Вы классический зритель');
     } else if (numberOfFilms > 30) {
         alert('Вы киноман');
-    } else if (numberOfFilms == null && numberOfFilms == '') {
-        i--;
     } else {
         i--;
     }
@@ -39,20 +37,19 @@ for (let i = 0; i < 1; i++) {
         privat: false
     };
 
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('Один из последних просмотренных фильмов?', ''),
+              b = prompt('На сколько оцените его?', '');
+    
+        if (a != null && b != null && a != '' && b != '' && a.length <= 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }          
+    }
+    
     console.log(personalMovieDB);
+
 }
-
-
-// for (let i = 0; i < 1; i++) {
-//     const a = prompt('Один из последних просмотренных фильмов?', ''),
-//           b = prompt('На сколько оцените его?', '');
-
-//     if (a != null && b != null && a != '' && b != '' && a.length <= 50) {
-//         personalMovieDB.movies[a] = b;
-//         console.log('done');
-//     } else {
-//         console.log('error');
-//         i--;
-//     }          
-// }
-
